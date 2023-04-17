@@ -26,3 +26,4 @@ $result = $connect->query($sql);
     else {
         echo "<p>Ошибка</p>";
     }
+
