@@ -20,9 +20,9 @@ $sql = "INSERT INTO `students`(`fname`, `lname`, `gender`, `age`) VALUES ('$fnam
 //выполнение запроса
 $result = $connect->query($sql);
     if ($result) {
-        echo "<p>Данные о студенте добавлены</p>";
+        echo "ok";
     }
     else {
-        echo "<p>Ошибка</p>";
+        echo "error";
     }
 
