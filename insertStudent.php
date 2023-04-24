@@ -5,7 +5,7 @@ $age = $_POST['age'];
 $gender = $_POST['gender'];
 $title = $_POST['title'];
 
-require_once("config.php");
+require_once("api/config.php");
 
 //соединение с БД
 $connect = new mysqli(HOST, USER, PASSWORD, DB);
@@ -21,6 +21,7 @@ $sqlg = "INSERT INTO `groups`(`title`) VALUES ('$title')";
 
 //выполнение запроса
 $result = $connect->query($sql);
+
 if ($result) {
     echo "ok";
 }

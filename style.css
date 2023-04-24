@@ -28,3 +28,12 @@
 .show-message {
     transform: translateY(0);
 }
+.like {
+    fill: gray;
+}
+.like:hover {
+    fill: red;
+}
+.like--active{
+    fill: purple;
+}
