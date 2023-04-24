@@ -64,3 +64,35 @@ return function(event){
 for(btn of btnsLike) {
     btn.addEventListener("click", setLike("успешно", "ошибка"));
 }
+
+// пример promise
+function getrandomInt(max){ //ф-ция генерации случайного числа
+    return Math.floor(Math.random()*max);
+}
+
+const myPromise = new Promise((resolve, reject)=>{
+    console.log("я - промис");
+    let num;
+    setTimeout(()=> {
+        num = getrandomInt(10);
+        console.log(num);
+        if(num >= 5){
+            resolve(num);
+        }
+        else {
+            reject("плохо!число меньше 5");
+        }
+    },3000);
+    
+});
+
+myPromise
+    .then( (result)=>{console.log(result*2)},
+    )
+    .catch(
+        (result)=>{console.log(result)}
+)
+.finally(
+    ()=>{console.log("конец промиса")}
+)
+
