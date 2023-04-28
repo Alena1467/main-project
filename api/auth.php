@@ -22,9 +22,17 @@ $result = $connect->prepare($sql);
 $result->bind_param("ss", $login, $password);
 $result->execute();
 $result = $result->get_result();
+
 if($row = $result->fetch_assoc()){
-    echo true;
+    $response = [
+        "status" => true,
+        "name" => $row["name"],
+        "login" => $row["login"]
+    ];
 }
 else {
-    echo false;
+    $response = [
+        "status" => false
+    ];
 }
+echo json_encode($response);
