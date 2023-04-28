@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php
 
 use LDAP\Result;
@@ -29,6 +30,7 @@ if($row = $result->fetch_assoc()){
         "name" => $row["name"],
         "login" => $row["login"]
     ];
+    $_SESSION["user-name"] = $row["name"];
 }
 else {
     $response = [
