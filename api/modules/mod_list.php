@@ -22,7 +22,8 @@ if(isset($_POST['age'])){
     $sort = $this->formatstr($_POST['sort']);
     $extra_sql .= " ORDER BY age $sort";
   }
- 
+
+
 // request run
 $result=$this->connect->query("SELECT * FROM students".$extra_sql);
 // output request result
