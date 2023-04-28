@@ -10,6 +10,11 @@
     <script defer src="fetch.js"></script>
 </head>
 <body>
+    <header>
+        <p class="profile">
+            <a href="#form-auth">Авторизоваться</a>
+        </p>
+    </header>
     <form id="form-insert-student">
         <input type="text" name="fname" id="fname" placeholder="введите имя" required><br>
         <input type="text" name="lname" id="lname" placeholder="введите фамилию" required><br>

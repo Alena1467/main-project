@@ -23,8 +23,8 @@ $result->bind_param("ss", $login, $password);
 $result->execute();
 $result = $result->get_result();
 if($row = $result->fetch_assoc()){
-    echo "вы авторизированы!";
+    echo true;
 }
 else {
-    echo "логин или пароль не верны";
+    echo false;
 }

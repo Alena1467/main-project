@@ -1,4 +1,5 @@
 const formAuth = document.getElementById("form-auth");
+const output = document.querySelector(".profile");
 
 formAuth.addEventListener("submit", auth);
 
@@ -14,7 +15,17 @@ function auth(event){
             return response.text();
     }
     ).then(
-        (text) => { console.log(text)}
+        (text) => { 
+            if(text){
+                output.innerHTML = "вы авторизованы";
+                formAuth.style.display = "none";
+            }
+            else {
+                let p  = document.createElement("p");
+                p.innerHTML = "ошибка авторизации";
+                output.prepend(p);
+            }
+        }
     )
 }
 
