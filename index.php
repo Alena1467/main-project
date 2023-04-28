@@ -7,6 +7,7 @@
     <title>Клиент-серверное приложение</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script defer src="fetch.js"></script>
 </head>
 <body>
     <form id="form-insert-student">
@@ -65,6 +66,13 @@ while ($row = $resultg->fetch_assoc()){
 <div class="message">
     csdvcsdv
 </div>
+
+<form id="form-auth" method="POST" action="api/auth.php">
+    <input type="text" id="login" name="login" placeholder="введите логин" required><br>
+    <input type="password" id="password" name="password" placeholder="введите пароль" required><br>
+    <input type="submit" value="войти">
+</form>
+    
 
 </body>
 </html>
